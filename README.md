@@ -6,6 +6,8 @@
 
 __papa.js__ 用来模拟人类打字.
 
+请看效果 <http://flujoo.github.io/papa.js/>.
+
 
 ## 安装
 
