@@ -180,5 +180,3 @@ papa.pa(selector, content, interval, cursor, callback);
 
 1. 其中 `content` 可以是 string 也可以是 array, 即上面所说的脚本.
 2. 前两个变量必须是 `selector` 和 `content`, 后三个变量可有可无可乱序.
-
-![]('assets/haskell_guy.jpg')
