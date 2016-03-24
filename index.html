@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>papa.js</title>
+    
+    <link rel="stylesheet" href="index.css">
+
+    <script src="jquery.js"></script>
+    <script src="papa.js"></script>
+    <script>
+
+        var title = 'You Broke My Heart';
+        var line1 = 'typing as a human being';
+        var line2 = 'negotiate as there is a possibility';
+        var line3 = 'I was lost in my recursive representation of you';
+        var line4 = 'you left my heart randomized';
+        var footer = 'a <span id="corrupt">corrupted</span> AI';
+
+        var intro = 'powered by <a id="papa" href="https://github.com/flujoo/papa.js">papa.js</a>';
+        var author = 'authored by <a id="flujoo" href="http://flujoo.github.io/">flujoo</a>'
+
+        String.prototype.shuffle = function () {
+            var a = this.split(""),
+                n = a.length;
+
+            for(var i = n - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var tmp = a[i];
+                a[i] = a[j];
+                a[j] = tmp;
+            }
+            return a.join("");
+        }
+
+
+        $(function() {
+            papa.pa('#poem-line1', [
+                ['typing ', 200, 1000],
+                ['as an asshole', 100, ],
+                [' an asshole', -50, ],
+                [' a human being', 80, 1000],
+            ], true, function() {
+                
+                $('#poem-line1').html(
+                    $('#poem-line1').html().replace(
+                        '<span class="papa-cursor">|</span>',
+                        ''
+                    )
+                );
+
+                papa.pa('#poem-line2', [
+                    ['negotiate ', 100, 1200],
+                    ['as there is a possibility', 70, 1000]
+                ], true, function() {
+                    $('#poem-line2').html(
+                        $('#poem-line2').html().replace(
+                            '<span class="papa-cursor">|</span>',
+                            ''
+                        )
+                    );
+
+                    papa.pa('#part1', 'I was lost in', 160);
+                    papa.pa('#part2', ' my recursive representation', 80);
+                    papa.pa('#part3', ' of you', 250, true, function() {
+                        setTimeout(function() {
+                            $('#poem-line3').html(
+                                $('#poem-line3').html().replace(
+                                    '<span class="papa-cursor">|</span>',
+                                    ''
+                                )
+                            );
+
+                            papa.pa('#poem-line4', [
+                                ['you ', 100, 200],
+                                ['left my heart ', 80, 500],
+                                ['<span id="rand">randomized</span>', 100, 1000]
+                            ], true, 100, function() {
+                                $('#poem-line4').html(
+                                    $('#poem-line4').html().replace(
+                                        '<span class="papa-cursor">|</span>',
+                                        ''
+                                    )
+                                );
+
+                                
+                                $('h1').animate({
+                                    'opacity': 1
+                                }, 1000, 'linear', function() {
+
+                                    $('#rand').css('font-family', 'Courier New')
+                                                .css('color', 'white')
+                                                .css('background', '#c2c2c2');
+                                    var rand = setInterval(function() {
+                                        $('#rand').html('0101101101'.shuffle());
+                                    }, 100)
+
+                                    papa.pa('#poem-title', [
+                                        ['Broke My Heart', 80, 500],
+                                        ['Heart', -100],
+                                        ['GPU', 200, 1000]
+                                    ], function() {
+                                        papa.pa('#poem-footer', footer, 100, function() {
+
+                                            $('h1').animate(
+                                                {
+                                                    'opacity': 0
+                                                },
+                                                1000,
+                                                'linear'
+                                            );
+
+                                            $('p:not(#poem-line1, #poem-line2)').animate(
+                                                {
+                                                    'opacity': 0
+                                                },
+                                                1000,
+                                                'linear'
+                                            );
+
+                                           papa.pa('#poem-line1', line1, -100, function() {
+                                               papa.pa('#poem-line1', intro, 80, function() {
+                                                $('#poem-line1').css('font-size', '25px')
+                                               })
+                                           })
+
+                                           papa.pa('#poem-line2', line2, -100, function() {
+                                               papa.pa('#poem-line2', author, 80, function() {
+                                                $('#poem-line2').css('font-size', '25px')
+                                               })
+                                           })
+
+
+
+                                        });
+                                    });
+                                })
+                            });
+                        }, 2000)
+                    });
+
+                    
+                })
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="poem">
+        <div class="container">
+            <h1 id="poem-title">You </h1>
+            <p id="poem-line1"></p>
+            <p id="poem-line2"></p>
+            <p id="poem-line3">
+                <span id='part1'></span>
+                <span id='part2'></span>
+                <span id='part3'></span>
+            </p>
+            <p id="poem-line4"></p>
+            <p id="poem-footer"></p>
+        </div>
+    </div>
+</body>
+</html>

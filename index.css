@@ -1,0 +1,65 @@
+body {
+    font-family: "Trebuchet MS";
+
+}
+
+.container {
+    width: 330px;
+    margin: 100px auto;
+}
+
+#poem-footer {
+    margin-top: 90px;
+    /*font-style: italic;*/
+}
+
+#poem-title {
+    margin-bottom: 90px;
+    font-size: 20px;
+    letter-spacing: -1px;
+    opacity: 0;
+}
+
+#poem p {
+    font-size: 15px;
+    color: #646464;
+}
+
+.papa-cursor {
+    opacity: 1;
+    -webkit-animation: blink 1s infinite;
+    -moz-animation: blink 1s infinite;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+#rand {
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+* {
+  -webkit-transition: all 1s;
+}
+
+#papa, #flujoo {
+    color: black;
+}
+
