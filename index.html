@@ -128,6 +128,7 @@
                                            })
 
                                            papa.pa('#poem-line2', line2, -100, function() {
+                                                clearInterval(rand);
                                                papa.pa('#poem-line2', author, 80, function() {
                                                 $('#poem-line2').css('font-size', '25px')
                                                })
