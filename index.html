@@ -18,7 +18,7 @@
         var line4 = 'you left my heart randomized';
         var footer = 'a <span id="corrupt">corrupted</span> AI';
 
-        var intro = 'powered by <a id="papa" href="https://github.com/flujoo/papa.js">papa.js</a>';
+        var intro = 'owered by <a id="papa" href="https://github.com/flujoo/papa.js">papa.js</a>';
         var author = 'authored by <a id="flujoo" href="http://flujoo.github.io/">flujoo</a>'
 
         String.prototype.shuffle = function () {
@@ -121,7 +121,8 @@
                                                 'linear'
                                             );
 
-                                           papa.pa('#poem-line1', line1, -100, function() {
+                                           papa.pa('#poem-line1', 'yping as a human being', -100, function() {
+                                                $('#poem-line1').html('p');
                                                papa.pa('#poem-line1', intro, 80, function() {
                                                 $('#poem-line1').css('font-size', '25px')
                                                })
