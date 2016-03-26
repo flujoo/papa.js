@@ -49,8 +49,14 @@ body {
     100% { opacity:1; }
 }
 
+/*
+https://css-tricks.com/almanac/properties/t/transition/
+*/
 * {
   -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 #papa, #flujoo {
