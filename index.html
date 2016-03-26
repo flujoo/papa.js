@@ -124,14 +124,17 @@
                                            papa.pa('#poem-line1', 'yping as a human being', -100, function() {
                                                 $('#poem-line1').html('p');
                                                papa.pa('#poem-line1', intro, 80, function() {
-                                                $('#poem-line1').css('font-size', '25px')
                                                })
                                            })
 
                                            papa.pa('#poem-line2', line2, -100, function() {
                                                 clearInterval(rand);
                                                papa.pa('#poem-line2', author, 80, function() {
-                                                $('#poem-line2').css('font-size', '25px')
+                                                setTimeout(function() {
+                                                    $('#papa').css('font-size', '35px')
+                                                                .css('font-weight', 'bold')
+                                                                .css('color', 'black');
+                                                }, 2000)
                                                })
                                            })
 
