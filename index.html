@@ -105,38 +105,40 @@
                                     ], function() {
                                         papa.pa('#poem-footer', footer, 100, function() {
 
-                                            $('h1').animate(
-                                                {
-                                                    'opacity': 0
-                                                },
-                                                1000,
-                                                'linear'
-                                            );
-
-                                            $('p:not(#poem-line1, #poem-line2)').animate(
-                                                {
-                                                    'opacity': 0
-                                                },
-                                                1000,
-                                                'linear'
-                                            );
-
-                                           papa.pa('#poem-line1', 'yping as a human being', -100, function() {
-                                                $('#poem-line1').html('p');
-                                               papa.pa('#poem-line1', intro, 80, function() {
-                                               })
-                                           })
-
-                                           papa.pa('#poem-line2', line2, -100, function() {
-                                                clearInterval(rand);
-                                               papa.pa('#poem-line2', author, 80, function() {
-                                                setTimeout(function() {
-                                                    $('#papa').css('font-size', '35px')
-                                                                .css('font-weight', 'bold')
-                                                                .css('color', 'black');
                                                 }, 2000)
-                                               })
-                                           })
+                                            setTimeout(function() {
+                                                 $('h1').animate(
+                                                     {
+                                                         'opacity': 0
+                                                     },
+                                                     1000,
+                                                     'linear'
+                                                 );
+
+                                                 $('p:not(#poem-line1, #poem-line2)').animate(
+                                                     {
+                                                         'opacity': 0
+                                                     },
+                                                     1000,
+                                                     'linear'
+                                                 );
+
+                                                papa.pa('#poem-line1', 'yping as a human being', -100, function() {
+                                                     $('#poem-line1').html('p');
+                                                    papa.pa('#poem-line1', intro, 80, function() {
+                                                    })
+                                                })
+
+                                                papa.pa('#poem-line2', line2, -100, function() {
+                                                     clearInterval(rand);
+                                                    papa.pa('#poem-line2', author, 80, function() {
+                                                     setTimeout(function() {
+                                                         $('#papa').css('font-size', '35px')
+                                                                     .css('font-weight', 'bold')
+                                                                     .css('color', 'black');
+                                                    })
+                                                })
+                                            }, 2500)
 
 
 
